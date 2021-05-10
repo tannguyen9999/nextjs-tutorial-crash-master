@@ -4,6 +4,7 @@ import { AppProps } from "next/app";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 import Loading from "../components/LoadingLine";
 import dynamic from "next/dynamic";
@@ -88,6 +89,49 @@ function MyApp({ Component, pageProps, val }) {
 
   return (
     <div>
+      <Head>
+        <title key="title">Du lịch Đà Lạt có gì ?</title>
+        <meta
+          name="description"
+          content="Các địa điểm vui chơi ăn uống tại Đà Lạt"
+        />
+        <meta charSet="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
+        <meta httpEquiv="content-language" content="vi" />
+
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Đà Lạt siêu xink" />
+        <meta
+          property="og:url"
+          content="https://nextjs-tutorial-crash-master.vercel.app/"
+        />
+        <meta
+          property="og:image"
+          content="https://saigonstartravel.com/wp-content/uploads/2019/05/tour-da-lat-2n2d-3.jpg"
+        />
+        <meta
+          property="og:description"
+          content="Khám phá Đà Lạt mát mẻ, đồ ăn ngon"
+        />
+        <meta property="article:author" content="Nguyen Tan" />
+        <meta property="article:published_time" content="2021-05-10" />
+        <meta property="article:tag" content="du lịch đà lat" />
+        <meta property="article:tag" content="du lich da lat" />
+        <meta property="article:tag" content="chơi gì ở đà lạt" />
+        <meta property="article:tag" content="sống ảo tại đà lạt" />
+        <meta
+          property="article:tag"
+          content="những địa điểm nổi tiếng đà lạt"
+        />
+        <meta name="geo.region" content="VN" />
+        <meta name="geo.placename" content="Th&agrave;nh phố Thủ Đức" />
+        <meta name="geo.position" content="10.847811;106.785799" />
+        <meta name="ICBM" content="10.847811, 106.785799" />
+        <meta name="robots" content="noodp,index,follow" />
+      </Head>
       <Loading isRouteChanging={state.isRouteChanging} key={state.loadingKey} />
       <Layout valuee={val}>
         <Component {...pageProps} />
