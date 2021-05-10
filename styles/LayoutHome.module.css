@@ -1,0 +1,23 @@
+.LayoutHomeLeft{
+    display:inline-block;
+    width: 65%;
+}
+
+.LayoutHomeRight{
+    display: block;
+    float: right;
+    margin-right: -15px;
+    width: 35%;
+}
+
+@media (max-width: 770px) {
+.LayoutHomeLeft{
+    width: 100%;
+}
+.LayoutHomeRight{
+    width: 100%;
+    margin-right: 0px;
+
+}
+ 
+  }
