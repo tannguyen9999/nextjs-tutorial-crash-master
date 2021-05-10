@@ -11,10 +11,28 @@ const Layout = ({ children, valuee }) => {
     <div>
       <Container maxWidth="lg" className={styles.layoutContainer}>
         <Head>
+          <title key="title">Du lịch Đà Lạt có gì ?</title>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <Head>
+            <meta
+              name="description"
+              key="description"
+              content="Khám phá các món ngon, địa điểm nghỉ dưỡng Đà Lạt"
+            />
+            <meta
+              property="og:title"
+              content="Du lịch Đà Lạt có gì ?"
+              key="og:title"
+            />
+            <meta
+              property="og:url"
+              key="og:url"
+              content="arc.com/customsoftware"
+            />
+          </Head>
         </Head>
 
         <header>
