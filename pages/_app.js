@@ -4,6 +4,7 @@ import { AppProps } from "next/app";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { NextSeo } from "next-seo";
 
 import Loading from "../components/LoadingLine";
 import dynamic from "next/dynamic";
@@ -88,6 +89,45 @@ function MyApp({ Component, pageProps, val }) {
 
   return (
     <div>
+      <NextSeo
+        title="Du lich DaLat co gi"
+        description="Du lich Da Lat an gi. o dau"
+        openGraph={{
+          url: "https://www.url.ie/a",
+          title: "Open Graph Title",
+          description: "Open Graph Description",
+          images: [
+            {
+              url:
+                "https://dalatwego.com/wp-content/uploads/2021/04/140727169_166193891964144_9036509937287539611_n-768x1024.jpeg",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+            },
+            {
+              url:
+                "https://dalatwego.com/wp-content/uploads/2021/04/caphe_tulu_tula_da_lat_21_1608039527-768x1024.jpeg",
+              width: 900,
+              height: 800,
+              alt: "Og Image Alt Second",
+            },
+            {
+              url:
+                "https://dalatwego.com/wp-content/uploads/2021/04/caphe_tulu_tula_da_lat_17_1608039526.jpeg",
+            },
+            {
+              url:
+                "https://dalatwego.com/wp-content/uploads/2021/04/137403310_159664439283756_801613666914531840_n-683x1024.jpeg",
+            },
+          ],
+          site_name: "SiteName",
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image",
+        }}
+      />
       <Loading isRouteChanging={state.isRouteChanging} key={state.loadingKey} />
       <Layout valuee={val}>
         <Component {...pageProps} />

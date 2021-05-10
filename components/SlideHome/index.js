@@ -1,44 +1,41 @@
 import styless from "../../styles/SlideHome.module.css";
-import React from 'react'
-import Link from 'next/link'
-import eles from '../../util/constant'
+import React from "react";
+import Link from "next/link";
+import eles from "../../util/constant";
 
 const SlideHome = () => {
-  
   const itemOther = () => {
-    const res = eles.map((item,index)=>{
-        if(index > 0){
-            return (
-                <Link href="/ao">
-                    <div
-              className={styless.itemo}
-              style={{
-                background: `url('${item.url}') top center / cover no-repeat`,
-              }}
-            >
-              <div className={styless.textOver}>
-                <div className={styless.tagSection2}>{item.tag}</div>
-                <p className={styless.titleSection2}>
-                  {item.title}
-                </p>
-                <div className={styless.date}>{item.date}</div>
+    const res = eles.map((item, index) => {
+      if (index > 0) {
+        return (
+          <div key={index}>
+            <Link href="/ao">
+              <div
+                className={styless.itemo}
+                style={{
+                  background: `url('${item.url}') top center / cover no-repeat`,
+                }}
+              >
+                <div className={styless.textOver}>
+                  <div className={styless.tagSection2}>{item.tag}</div>
+                  <p className={styless.titleSection2}>{item.title}</p>
+                  <div className={styless.date}>{item.date}</div>
+                </div>
               </div>
-            </div>
-                </Link>
-                
-            )
-        }else{
-            return null
-        }
-    })
-    return res
+            </Link>
+          </div>
+        );
+      } else {
+        return null;
+      }
+    });
+    return res;
   };
 
   return (
-    
-      <div className={styless.sildePicture}>
-          <Link href="/ao">
-          <div
+    <div className={styless.sildePicture}>
+      <Link href="/ao">
+        <div
           className={styless.item1}
           style={{
             background: `url('${eles[0].url}') top center / cover no-repeat`,
@@ -50,12 +47,10 @@ const SlideHome = () => {
             <div className={styless.date}>{eles[0].date}</div>
           </div>
         </div>
-          </Link>
-        
-        {itemOther()}
-      </div>
-    
-    
+      </Link>
+
+      {itemOther()}
+    </div>
   );
 };
 
