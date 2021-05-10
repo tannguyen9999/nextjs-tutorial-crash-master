@@ -13,24 +13,45 @@ const Layout = ({ children, valuee }) => {
         <Head>
           <title key="title">Du lịch Đà Lạt có gì ?</title>
           <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <meta
             name="description"
-            key="description"
-            content="Khám phá các món ngon, địa điểm nghỉ dưỡng Đà Lạt"
+            content="Các địa điểm vui chơi ăn uống tại Đà Lạt"
           />
+          <meta charset="UTF-8" />
           <meta
-            property="og:title"
-            content="Du lịch Đà Lạt có gì ?"
-            key="og:title"
-          />
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+          ></meta>
+          <meta http-equiv="content-language" content="vi" />
+
+          <meta property="og:type" content="article" />
+          <meta property="og:title" content="Đà Lạt siêu xink" />
           <meta
             property="og:url"
-            key="og:url"
-            content="arc.com/customsoftware"
+            content="https://nextjs-tutorial-crash-master.vercel.app/"
           />
+          <meta
+            property="og:image"
+            content="https://saigonstartravel.com/wp-content/uploads/2019/05/tour-da-lat-2n2d-3.jpg"
+          />
+          <meta
+            property="og:description"
+            content="Khám phá Đà Lạt mát mẻ, đồ ăn ngon"
+          />
+          <meta property="article:author" content="Nguyen Tan" />
+          <meta property="article:published_time" content="2021-05-10" />
+          <meta property="article:tag" content="du lịch đà lat" />
+          <meta property="article:tag" content="du lich da lat" />
+          <meta property="article:tag" content="chơi gì ở đà lạt" />
+          <meta property="article:tag" content="sống ảo tại đà lạt" />
+          <meta
+            property="article:tag"
+            content="những địa điểm nổi tiếng đà lạt"
+          />
+          <meta name="geo.region" content="VN" />
+          <meta name="geo.placename" content="Th&agrave;nh phố Thủ Đức" />
+          <meta name="geo.position" content="10.847811;106.785799" />
+          <meta name="ICBM" content="10.847811, 106.785799" />
+          <meta name="robots" content="noodp,index,follow" />
         </Head>
 
         <header>
