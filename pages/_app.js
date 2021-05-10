@@ -4,7 +4,6 @@ import { AppProps } from "next/app";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-// import { NextSeo } from "next-seo";
 
 import Loading from "../components/LoadingLine";
 import dynamic from "next/dynamic";
