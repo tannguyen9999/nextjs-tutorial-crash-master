@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://nextjs-tutorial-crash-master.vercel.app/sitemap.xml
+Disallow:
