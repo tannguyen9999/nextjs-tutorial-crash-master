@@ -40,7 +40,7 @@ export default function AlertDialog({
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
-        style={{ background: "black" }}
+        style={{ background: "black", cursor: "zoom-out" }}
       >
         <style>{`.MuiDialog-paperWidthSm{
                   max-width:none
