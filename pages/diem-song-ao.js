@@ -1,9 +1,11 @@
-import dynamic from 'next/dynamic';
-import sub2 from '../util/constant'
-const Dacsan = dynamic(import('../components/ui/dac-san'), {
-	ssr: false,
-	loading: () => <div>
-		<div className="loader"><style>{`
+import dynamic from "next/dynamic";
+import sub2 from "../util/constant";
+const Dacsan = dynamic(import("../components/ui/dac-san"), {
+  ssr: false,
+  loading: () => (
+    <div>
+      <div className="loader">
+        <style>{`
 	.loader {
 		border: 2px solid #f3f3f3;
 		border-radius: 50%;
@@ -27,14 +29,11 @@ const Dacsan = dynamic(import('../components/ui/dac-san'), {
 		100% { transform: rotate(360deg); }
 	  }
 	`}</style>
-	
-	</div>
-	<div style={{textAlign:'center'}}>Đang load trang đợi tí nhé...</div>
-	</div>,
-  });
-export default function Home() {
-	return (
-		<Dacsan sub2={sub2} ></Dacsan>
-
-	)
+      </div>
+      <div style={{ textAlign: "center" }}>Đang load trang đợi tí nhé...</div>
+    </div>
+  ),
+});
+export default function Home({ val }) {
+  return <Dacsan val={val} sub2={sub2}></Dacsan>;
 }

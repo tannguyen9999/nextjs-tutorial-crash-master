@@ -133,7 +133,7 @@ function MyApp({ Component, pageProps, val }) {
       </Head>
       <Loading isRouteChanging={state.isRouteChanging} key={state.loadingKey} />
       <Layout valuee={val}>
-        <Component {...pageProps} />
+        <Component val={val} {...pageProps} />
       </Layout>
     </React.Fragment>
   );

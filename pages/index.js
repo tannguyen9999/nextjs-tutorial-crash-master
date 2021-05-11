@@ -1,14 +1,16 @@
-import dynamic from 'next/dynamic';
-import SlideHome from '../components/SlideHome/index'
-import LayoutHomeLeft from '../components/LayoutHomeLeft'
-import LayoutHomeRight from '../components/LayoutHomeRight';
-import BlockContent from '../components/BlockContent/index'
-import BlockContent2 from '../components/BlockContent2/index'
+import dynamic from "next/dynamic";
+import SlideHome from "../components/SlideHome/index";
+import LayoutHomeLeft from "../components/LayoutHomeLeft";
+import LayoutHomeRight from "../components/LayoutHomeRight";
+import BlockContent from "../components/BlockContent/index";
+import BlockContent2 from "../components/BlockContent2/index";
 
-const Layout = dynamic(import('../components/Layout'), {
-	ssr: false,
-	loading: () => <div>
-		<div className="loader"><style>{`
+const Layout = dynamic(import("../components/Layout"), {
+  ssr: false,
+  loading: () => (
+    <div>
+      <div className="loader">
+        <style>{`
 	.loader {
 		border: 2px solid #f3f3f3;
 		border-radius: 50%;
@@ -32,24 +34,22 @@ const Layout = dynamic(import('../components/Layout'), {
 		100% { transform: rotate(360deg); }
 	  }
 	`}</style>
-	
-	</div>
-	<div style={{textAlign:'center'}}>Đang load trang đợi tí nhé...</div>
-	</div>,
-  });
+      </div>
+      <div style={{ textAlign: "center" }}>Đang load trang đợi tí nhé...</div>
+    </div>
+  ),
+});
 export default function Home() {
-	return (
+  return (
+    <div>
+      <SlideHome></SlideHome>
 
-		<div>
-			
-			<SlideHome></SlideHome>
-			<LayoutHomeLeft>
-				<BlockContent></BlockContent>
-			</LayoutHomeLeft>
-			<LayoutHomeRight>
-				<BlockContent2></BlockContent2>
-			</LayoutHomeRight>
-		</div>
-
-	)
+      <LayoutHomeLeft>
+        <BlockContent></BlockContent>
+      </LayoutHomeLeft>
+      <LayoutHomeRight>
+        <BlockContent2></BlockContent2>
+      </LayoutHomeRight>
+    </div>
+  );
 }
