@@ -100,7 +100,10 @@ function MyApp({ Component, pageProps, val }) {
           content="width=device-width, initial-scale=1"
         ></meta>
         <meta httpEquiv="content-language" content="vi" />
-
+        <meta
+          name="google-site-verification"
+          content="ZpFA1kPbIReFQGALNPmSHK1OX_FOhq2J68XnpRKROtY"
+        />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Đà Lạt siêu xink" />
         <meta
