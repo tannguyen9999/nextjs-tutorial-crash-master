@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Head from "next/head";
-
+import React from "react";
 import Loading from "../components/LoadingLine";
 import dynamic from "next/dynamic";
 const line = [
@@ -59,7 +59,6 @@ function MyApp({ Component, pageProps, val }) {
     isRouteChanging: false,
     loadingKey: 0,
   });
-
   useEffect(() => {
     const handleRouteChangeStart = () => {
       setState((prevState) => ({
@@ -88,7 +87,7 @@ function MyApp({ Component, pageProps, val }) {
   }, [router.events]);
 
   return (
-    <div>
+    <React.Fragment>
       <Head>
         <title key="title">Du lịch Đà Lạt có gì ?</title>
         <meta
@@ -136,17 +135,29 @@ function MyApp({ Component, pageProps, val }) {
       <Layout valuee={val}>
         <Component {...pageProps} />
       </Layout>
-    </div>
+    </React.Fragment>
   );
 }
-MyApp.getInitialProps = async ({ ctx }) => {
-  const pathname = ctx?.pathname;
-  let res = line.findIndex((e) => e == pathname);
-  if (res == -1) {
+
+MyApp.getInitialProps = async ({ Component, ctx }) => {
+  let pathname;
+  let res;
+
+  try {
+    pathname = ctx?.pathname;
+    res = line.findIndex((e) => e == pathname);
+  } catch (error) {}
+  if (res == -1 || !res) {
     res = 0;
   }
   return {
     val: res,
+    pageProps: {
+      ...(Component.getInitialProps
+        ? await Component.getInitialProps(ctx)
+        : {}),
+    },
   };
 };
+
 export default MyApp;
