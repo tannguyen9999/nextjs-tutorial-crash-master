@@ -109,7 +109,7 @@ function MyApp({ Component, pageProps, val }) {
         />
         <meta
           property="og:image"
-          content="https://saigonstartravel.com/wp-content/uploads/2019/05/tour-da-lat-2n2d-3.jpg"
+          content="https://res.cloudinary.com/dhvp2fnsk/image/upload/v1620715109/dev_setups/uq9f0htkov5lvxzimquj.png?fbclid=IwAR0kE1vB0st8BH3qz5XMMeKMsrrxs-Pod_32xZe0MTXEqPVVAE3tdRRDObA"
         />
         <meta
           property="og:description"
